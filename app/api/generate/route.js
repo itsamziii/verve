@@ -86,11 +86,7 @@ export const POST = async (req) => {
       finalBodyTag = bodyTagData.choices[0].message.content;
     }
 
-    const finalHtml = finalizeHtml(
-      name,
-      creator,
-      bodyTagData.choices[0].message.content
-    );
+    const finalHtml = finalizeHtml(name, creator, finalBodyTag);
 
     const setup = setupProject(
       name,
